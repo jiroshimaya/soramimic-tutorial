@@ -1,7 +1,7 @@
 import editdistance as ed
 import MeCab
 
-def sort_by_distance(target_word, wordlist):
+def sort_by_distance(target_word: dict, wordlist: list[dict]) -> list[dict]:
     """
     対象単語の発音と単語リストの各単語の発音との編集距離に基づいて、単語リストをソートします。
     
@@ -20,7 +20,7 @@ def sort_by_distance(target_word, wordlist):
     sorted_wordlist = [word for word, distance in sorted_distances]
     return sorted_wordlist
 
-def calculate_distance(dict1, dict2):
+def calculate_distance(dict1: dict, dict2: dict) -> int:
     """
     2つの辞書から 'pronunciation' キーの値を取得し、その編集距離を計算して返します。
 
